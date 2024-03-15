@@ -26,10 +26,25 @@
 
 /* Utilities */
 
+.btn-rec{
+  -fx-background-radius: 60;
+  -fx-background-color: -select-red;
+  -fx-font-weight: bold;
+}
+
+.btn-rec:hover{
+  -fx-opacity: 0.8;
+}
+
 .border-rounded{
   -fx-background-radius: 5;
 }
 
 .text-color{
   -fx-fill: -text;
+  -fx-text-fill: -text;
+}
+
+.cursor-pointer{
+  -fx-cursor: hand;
 }
