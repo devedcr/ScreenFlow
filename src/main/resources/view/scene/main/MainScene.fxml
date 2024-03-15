@@ -14,11 +14,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="primary-color" xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eduardo.app.controller.MainSceneController">
+<AnchorPane fx:id="rootMainScene" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eduardo.app.controller.MainSceneController">
     <children>
-        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-              prefWidth="600.0">
+        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
             <children>
                 <Pane prefHeight="45.0" prefWidth="600.0">
                     <children>
@@ -26,55 +24,49 @@
                             <children>
                                 <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../../../image/screenflow.png"/>
+                                        <Image url="@../../../image/screenflow.png" />
                                     </image>
                                 </ImageView>
-                                <Text fill="WHITESMOKE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-color"
-                                      text="Screen Flow">
+                                <Text fill="WHITESMOKE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-color" text="Screen Flow">
                                     <font>
-                                        <Font name="System Bold" size="13.0"/>
+                                        <Font name="System Bold" size="13.0" />
                                     </font>
                                 </Text>
                             </children>
                         </HBox>
-                        <fx:include layoutX="492" source="../../component/menu/MenuComponent.fxml"/>
+                        <fx:include layoutX="492" source="../../component/menu/MenuComponent.fxml" />
                     </children>
                 </Pane>
                 <HBox prefHeight="355.0" prefWidth="600.0" spacing="5.0">
                     <children>
-                        <TabPane minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0"
-                                 styleClass="secondary-color" tabClosingPolicy="UNAVAILABLE">
+                        <TabPane minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0" styleClass="secondary-color" tabClosingPolicy="UNAVAILABLE">
                             <tabs>
                                 <Tab text="Tab 1">
                                     <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="200.0"/>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="200.0" />
                                     </content>
                                 </Tab>
                                 <Tab text="Tab 2">
                                     <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
-                                                    prefWidth="200.0"/>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                                     </content>
                                 </Tab>
                             </tabs>
                         </TabPane>
                         <Pane prefWidth="200.0">
                             <styleClass>
-                                <String fx:value="secondary-color"/>
-                                <String fx:value="border-rounded"/>
+                                <String fx:value="secondary-color" />
+                                <String fx:value="border-rounded" />
                             </styleClass>
                             <children>
-                                <Button layoutX="31.0" layoutY="143.0" mnemonicParsing="false" prefHeight="91.0"
-                                        prefWidth="108.0" text="Button"/>
-                                <HBox alignment="CENTER" layoutX="14.0" layoutY="318.0" prefHeight="25.0"
-                                      prefWidth="150.0">
+                                <Button layoutX="31.0" layoutY="143.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="108.0" text="Button" />
+                                <HBox alignment="CENTER" layoutX="14.0" layoutY="318.0" prefHeight="25.0" prefWidth="150.0">
                                     <styleClass>
-                                        <String fx:value="primary-color"/>
-                                        <String fx:value="border-rounded"/>
+                                        <String fx:value="primary-color" />
+                                        <String fx:value="border-rounded" />
                                     </styleClass>
                                     <children>
-                                        <Text fill="WHITESMOKE" strokeType="OUTSIDE" strokeWidth="0.0"
-                                              styleClass="text-color" text="00:00:00"/>
+                                        <Text fill="WHITESMOKE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-color" text="00:00:00" />
                                     </children>
                                 </HBox>
                             </children>
@@ -83,8 +75,12 @@
                 </HBox>
             </children>
             <padding>
-                <Insets bottom="10.0" left="10.0" right="10.0"/>
+                <Insets bottom="10.0" left="10.0" right="10.0" />
             </padding>
         </VBox>
     </children>
+   <styleClass>
+      <String fx:value="primary-color" />
+      <String fx:value="border-rounded" />
+   </styleClass>
 </AnchorPane>
