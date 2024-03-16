@@ -1,6 +1,7 @@
 package com.eduardo.app.recorder;
 
 import com.eduardo.app.provider.AppProvider;
+import com.eduardo.app.setting.SettingScreen;
 import com.eduardo.app.util.TimeUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -14,23 +15,22 @@ import java.util.concurrent.Executors;
 public class RecorderCV implements Recorder {
     private static final Logger logger = LogManager.getLogger(RecorderCV.class);
     private final FFmpegFrameRecorder recorder;
-    private final Rectangle rectangle = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
     private RecorderScreen recorderScreen;
     private boolean isRecording;
     private final ExecutorService executor = Executors.newFixedThreadPool(10);
 
     public RecorderCV() {
         this.recorder = AppProvider.providerFFmpegFrameRecorder();
-        this.recorderScreen = new RecorderScreen(recorder, rectangle);
+        this.recorderScreen = new RecorderScreen(recorder, SettingScreen.dimension);
     }
 
     @Override
     public void start() {
+        isRecording = true;
+        logger.info("Start Recording...");
         new Thread(() -> {
-            logger.info("Start Recording...");
             startRecorder();
-            isRecording = true;
-            double deltaTime = TimeUtil.getDeltaTime();
+            double deltaTime = TimeUtil.getDeltaTime(SettingScreen.fps);
             long currentTime;
             long elapsedTime;
             long lastFrameTime = System.nanoTime();
@@ -79,7 +79,6 @@ public class RecorderCV implements Recorder {
         recorder.start();
         while (true) {
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Input something command!!!");
             if (scanner.next().equals("stop")) {
                 recorder.stop();
                 break;

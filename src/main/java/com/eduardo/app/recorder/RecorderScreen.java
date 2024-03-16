@@ -9,7 +9,7 @@ import java.awt.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class RecorderScreen {
+public class RecorderScreen implements Capturer {
     private static final Logger logger = LogManager.getLogger(RecorderScreen.class);
     private FFmpegFrameRecorder recorder;
     private Rectangle dimension;
@@ -19,6 +19,7 @@ public class RecorderScreen {
         this.dimension = dimension;
     }
 
+    @Override
     public void capture() {
         try {
             var bufferedImage = new Robot().createScreenCapture(dimension);
