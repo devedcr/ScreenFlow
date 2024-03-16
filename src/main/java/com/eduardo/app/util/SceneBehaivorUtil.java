@@ -4,7 +4,7 @@ import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
 
-public class SceneBehaivor {
+public class SceneBehaivorUtil {
     private static double xOffset;
     private static double yOffset;
 

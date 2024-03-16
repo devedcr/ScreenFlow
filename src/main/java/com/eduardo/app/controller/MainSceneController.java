@@ -1,6 +1,6 @@
 package com.eduardo.app.controller;
 
-import com.eduardo.app.util.SceneBehaivor;
+import com.eduardo.app.util.SceneBehaivorUtil;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.Pane;
@@ -14,7 +14,7 @@ public class MainSceneController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        SceneBehaivor.behaviorMove(rootMainScene);
+        SceneBehaivorUtil.behaviorMove(rootMainScene);
     }
 
 }
