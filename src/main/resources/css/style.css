@@ -48,3 +48,50 @@
 .cursor-pointer{
   -fx-cursor: hand;
 }
+
+/*Custom Component Native*/
+
+.tab {
+  -fx-padding: 4 10;
+  -fx-fill:-text;
+  -fx-background-insets: 0 1 0 1, 0, 0;
+  -fx-cursor: hand;
+}
+
+.tab .tab-label {
+    -fx-text-fill: -text;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab-pane {
+	-fx-tab-min-width: 80px;
+	-fx-background-color: transparent;
+}
+
+.tab-pane .tab:selected {
+	-fx-background-color: -secondary-color;
+}
+
+.tab-header-area .tab{
+   -fx-background-color: -select;
+}
+
+.tab-content-area {
+  -fx-background-color: -secondary-color;
+  -fx-background-radius: 0 5 5 5;
+}
+
+.tab-header-area .tab-header-background {
+ 	-fx-background-color: -primary-color;
+}
+
+.tab-pane .tab-header-area {
+  -fx-padding: 0 0 0 -1;
+}
+
+.tab-pane:focused .tab-header-area .headers-region .tab:selected .focus-indicator {
+ 	-fx-border-width: 0;
+	-fx-border-insets: 0 0 0 0;
+	-fx-border-radius: 0;
+}
