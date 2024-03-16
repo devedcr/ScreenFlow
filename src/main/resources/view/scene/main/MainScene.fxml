@@ -41,15 +41,29 @@
                     <children>
                         <TabPane minHeight="-Infinity" minWidth="-Infinity" prefWidth="423.0" styleClass="secondary-color" tabClosingPolicy="UNAVAILABLE">
                             <tabs>
-                                <Tab text="Tab 1">
+                                <Tab text="Screen">
                                     <content>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="265.0" prefWidth="423.0" />
                                     </content>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/monitor.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                                 </Tab>
-                                <Tab text="Tab 2">
+                                <Tab text="Setting">
                                     <content>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                                     </content>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/setting.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                                 </Tab>
                             </tabs>
                         </TabPane>
