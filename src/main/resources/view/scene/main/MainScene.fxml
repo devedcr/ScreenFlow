@@ -43,7 +43,7 @@
                             <tabs>
                                 <Tab text="Screen">
                                     <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="265.0" prefWidth="423.0" />
+                                        <fx:include source="../../component/tabscreen/TabScreenComponent.fxml"/>
                                     </content>
                            <graphic>
                               <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">

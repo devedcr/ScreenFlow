@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.eduardo.app.controller.TabScreenController"
+            prefHeight="265.0" prefWidth="423.0">
+    <children>
+        <VBox prefHeight="295.0" prefWidth="423.0">
+            <children>
+                <HBox prefHeight="250.0" prefWidth="423.0">
+                    <children>
+                        <VBox prefHeight="222.0" prefWidth="221.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="165.0" prefWidth="186.0">
+                                    <children>
+                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../../image/monitor.png"/>
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="105.0" prefWidth="186.0">
+                                    <children>
+                                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0"
+                                              prefWidth="170.0" spacing="5.0">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-color"
+                                                      text="Resolution"/>
+                                                <ComboBox prefHeight="24.0" prefWidth="169.0"/>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets/>
+                                            </VBox.margin>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="212.0" prefWidth="212.0" spacing="30.0">
+                            <children>
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="170.0"
+                                      spacing="5.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-color"
+                                              text="Format"/>
+                                        <ComboBox prefHeight="24.0" prefWidth="169.0"/>
+                                    </children>
+                                </VBox>
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="170.0"
+                                      spacing="5.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-color"
+                                              text="Frame"/>
+                                        <ComboBox prefWidth="170.0"/>
+                                    </children>
+                                </VBox>
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="170.0"
+                                      spacing="5.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-color"
+                                              text="Screen Size"/>
+                                        <ComboBox prefHeight="24.0" prefWidth="170.0"/>
+                                    </children>
+                                </VBox>
+                            </children>
+                            <HBox.margin>
+                                <Insets top="10.0"/>
+                            </HBox.margin>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="73.0" prefWidth="380.0" spacing="5.0">
+                            <children>
+                                <HBox prefHeight="28.0" prefWidth="249.0" spacing="10.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-color"
+                                              text="BitRate Mbps"/>
+                                        <TextField alignment="CENTER" prefHeight="18.0" prefWidth="35.0">
+                                            <font>
+                                                <Font size="9.0"/>
+                                            </font>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <Slider prefHeight="16.0" prefWidth="318.0"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+
+</AnchorPane>
