@@ -67,32 +67,7 @@
                                 </Tab>
                             </tabs>
                         </TabPane>
-                        <Pane prefWidth="200.0">
-                            <styleClass>
-                                <String fx:value="secondary-color" />
-                                <String fx:value="border-rounded" />
-                            </styleClass>
-                            <children>
-                                <Button layoutX="14.0" layoutY="93.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="113.0" text="REC">
-                           <styleClass>
-                              <String fx:value="btn-rec" />
-                              <String fx:value="text-color" />
-                              <String fx:value="cursor-pointer" />
-                           </styleClass></Button>
-                                <HBox alignment="CENTER" layoutX="8.0" layoutY="283.0" prefHeight="36.0" prefWidth="122.0">
-                                    <styleClass>
-                                        <String fx:value="primary-color" />
-                                        <String fx:value="border-rounded" />
-                                    </styleClass>
-                                    <children>
-                                        <Text fill="WHITESMOKE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-color" text="00:00:00" />
-                                    </children>
-                           <padding>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </padding>
-                                </HBox>
-                            </children>
-                        </Pane>
+                        <fx:include source="../../component/buttonrecord/ButtonRecordComponent.fxml"/>
                     </children>
                <VBox.margin>
                   <Insets />
