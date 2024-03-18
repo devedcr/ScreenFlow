@@ -14,7 +14,8 @@
         <String fx:value="border-rounded"/>
     </styleClass>
     <children>
-        <Button layoutX="14.0" layoutY="93.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="113.0" text="REC">
+        <Button fx:id="btnRecord" layoutX="14.0" layoutY="93.0" mnemonicParsing="false" onAction="#onActionBtnRecord"
+                prefHeight="108.0" prefWidth="113.0" text="REC">
             <styleClass>
                 <String fx:value="btn-rec"/>
                 <String fx:value="text-color"/>
