@@ -1,5 +1,7 @@
 package com.eduardo.app.controller;
 
+import com.eduardo.app.recorder.Recorder;
+import com.eduardo.app.recorder.RecorderCV;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -13,6 +15,11 @@ public class ButtonRecordController {
     public Button btnRecord;
     private boolean isRecording;
     private ImageView iconStop;
+    private Recorder recorder;
+
+    public ButtonRecordController() {
+        recorder = new RecorderCV();
+    }
 
     public void onActionBtnRecord(ActionEvent actionEvent) {
         if (isRecording) {
@@ -24,11 +31,13 @@ public class ButtonRecordController {
 
     private void startRecording() {
         setBtnIconStop();
+        recorder.start();
         isRecording = true;
     }
 
     private void stopRecording() {
         setBtnIconRec();
+        recorder.stop();
         isRecording = false;
     }
 
