@@ -38,12 +38,12 @@ public class PlayTime {
 
     public PlayTime() {
         this.day = this.hour = this.minute = this.second = 0;
-        this.timer = new Timer();
         this.time = new StringBuilder(day + separator + hour + separator + minute + separator + second);
         this.showTime = SHOW_TIME.SHOW_ALL;
     }
 
     public void start(Consumer<StringBuilder> consumer) {
+        this.timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {

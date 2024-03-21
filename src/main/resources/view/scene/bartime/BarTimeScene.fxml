@@ -29,7 +29,7 @@
         </HBox>
         <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="95.0">
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-color" text="00:00:00"
+                <Text fx:id="textTime" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-color" text="00:00:00"
                       textAlignment="CENTER" wrappingWidth="66.4794921875">
                     <font>
                         <Font size="12.0"/>
