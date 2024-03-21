@@ -9,7 +9,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox alignment="CENTER" prefHeight="45.0" prefWidth="350.0" spacing="5.0" xmlns="http://javafx.com/javafx/21"
+<HBox fx:id="rootBarTime" alignment="CENTER" prefHeight="45.0" prefWidth="350.0" spacing="5.0"
+      xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eduardo.app.controller.BarTimeSceneController">
     <children>
         <HBox alignment="CENTER" prefHeight="30.0" prefWidth="97.0" spacing="5.0">

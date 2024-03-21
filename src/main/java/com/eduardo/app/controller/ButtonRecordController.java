@@ -1,11 +1,13 @@
 package com.eduardo.app.controller;
 
+import com.eduardo.app.provider.AppProvider;
 import com.eduardo.app.recorder.Recorder;
 import com.eduardo.app.recorder.RecorderCV;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 import java.util.Objects;
 
@@ -16,9 +18,11 @@ public class ButtonRecordController {
     private boolean isRecording;
     private ImageView iconStop;
     private Recorder recorder;
+    private Stage stageBarTime;
 
     public ButtonRecordController() {
         recorder = new RecorderCV();
+        stageBarTime = AppProvider.providerStageBarTime();
     }
 
     public void onActionBtnRecord(ActionEvent actionEvent) {
@@ -31,12 +35,14 @@ public class ButtonRecordController {
 
     private void startRecording() {
         setBtnIconStop();
+        openStageSceneBarTime();
         recorder.start();
         isRecording = true;
     }
 
     private void stopRecording() {
         setBtnIconRec();
+        closeStageSceneBarTime();
         recorder.stop();
         isRecording = false;
     }
@@ -56,4 +62,11 @@ public class ButtonRecordController {
         btnRecord.setText("REC");
     }
 
+    private void openStageSceneBarTime() {
+        stageBarTime.show();
+    }
+
+    private void closeStageSceneBarTime() {
+        stageBarTime.close();
+    }
 }
