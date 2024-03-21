@@ -24,6 +24,10 @@
     -fx-background-color:-select-color;
 }
 
+.bg-red{
+    -fx-background-color:-select-red;
+}
+
 /* Utilities */
 
 .btn-rec{
