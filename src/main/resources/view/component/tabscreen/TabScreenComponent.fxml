@@ -35,7 +35,7 @@
                                             <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-color"
                                                       text="Resolution"/>
-                                                <ComboBox prefHeight="24.0" prefWidth="169.0"/>
+                                                <ComboBox fx:id="comboResolution" prefHeight="24.0" prefWidth="169.0"/>
                                             </children>
                                             <VBox.margin>
                                                 <Insets/>
@@ -52,7 +52,7 @@
                                     <children>
                                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-color"
                                               text="Format"/>
-                                        <ComboBox prefHeight="24.0" prefWidth="169.0"/>
+                                        <ComboBox fx:id="comboFormat" prefHeight="24.0" prefWidth="169.0" />
                                     </children>
                                 </VBox>
                                 <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="170.0"
@@ -60,7 +60,7 @@
                                     <children>
                                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-color"
                                               text="Frame"/>
-                                        <ComboBox prefWidth="170.0"/>
+                                        <ComboBox fx:id="comboFrame" prefWidth="170.0" />
                                     </children>
                                 </VBox>
                                 <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="170.0"
@@ -68,7 +68,7 @@
                                     <children>
                                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-color"
                                               text="Screen Size"/>
-                                        <ComboBox prefHeight="24.0" prefWidth="170.0"/>
+                                        <ComboBox fx:id="comboScreenSize" prefHeight="24.0" prefWidth="170.0" />
                                     </children>
                                 </VBox>
                             </children>
@@ -86,14 +86,14 @@
                                     <children>
                                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-color"
                                               text="BitRate Mbps"/>
-                                        <TextField alignment="CENTER" prefHeight="18.0" prefWidth="35.0">
+                                        <TextField fx:id="textFieldBitRate" alignment="CENTER" prefHeight="18.0" prefWidth="35.0">
                                             <font>
                                                 <Font size="9.0"/>
                                             </font>
                                         </TextField>
                                     </children>
                                 </HBox>
-                                <Slider prefHeight="16.0" prefWidth="318.0"/>
+                                <Slider fx:id="sliderBitRate" prefHeight="16.0" prefWidth="318.0" />
                             </children>
                         </VBox>
                     </children>

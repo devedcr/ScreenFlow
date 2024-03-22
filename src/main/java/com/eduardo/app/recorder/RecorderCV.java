@@ -7,7 +7,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.bytedeco.javacv.FFmpegFrameRecorder;
 
-import java.awt.*;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -21,7 +20,7 @@ public class RecorderCV implements Recorder {
 
     public RecorderCV() {
         this.recorder = AppProvider.providerFFmpegFrameRecorder();
-        this.recorderScreen = new RecorderScreen(recorder, SettingScreen.dimension);
+        this.recorderScreen = new RecorderScreen(recorder, SettingScreen.dimension.getValue());
     }
 
     @Override
@@ -30,7 +29,7 @@ public class RecorderCV implements Recorder {
         logger.info("Start Recording...");
         new Thread(() -> {
             startRecorder();
-            double deltaTime = TimeUtil.getDeltaTime(SettingScreen.fps);
+            double deltaTime = TimeUtil.getDeltaTime(SettingScreen.fps.getValue());
             long currentTime;
             long elapsedTime;
             long lastFrameTime = System.nanoTime();

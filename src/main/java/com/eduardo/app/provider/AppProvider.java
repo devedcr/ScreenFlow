@@ -21,9 +21,9 @@ public class AppProvider {
     public static FFmpegFrameRecorder providerFFmpegFrameRecorder() {
         DateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
         String filename = dateFormat.format(new Date()) + "." + SettingScreen.format;
-        FFmpegFrameRecorder recorder = new FFmpegFrameRecorder(filename, SettingScreen.resolutionWidth, SettingScreen.resolutionHeight);
-        recorder.setFormat(SettingScreen.format);
-        recorder.setFrameRate(SettingScreen.fps);
+        FFmpegFrameRecorder recorder = new FFmpegFrameRecorder(filename, SettingScreen.resolution.getValue().width, SettingScreen.resolution.getValue().height);
+        recorder.setFormat(SettingScreen.format.getValue());
+        recorder.setFrameRate(SettingScreen.fps.getValue());
         recorder.setVideoQuality(SettingScreen.quality);
         recorder.setVideoBitrate(SettingScreen.bitRate);
         return recorder;
