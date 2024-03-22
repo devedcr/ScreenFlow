@@ -43,7 +43,7 @@
         </HBox>
         <HBox alignment="CENTER" prefHeight="30.0" prefWidth="118.0" spacing="5.0">
             <children>
-                <Button mnemonicParsing="false">
+                <Button mnemonicParsing="false" onAction="#onActionPause">
                     <graphic>
                         <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -57,7 +57,7 @@
                         <String fx:value="cursor-pointer"/>
                     </styleClass>
                 </Button>
-                <Button mnemonicParsing="false">
+                <Button mnemonicParsing="false" onAction="#onActionStop">
                     <graphic>
                         <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -71,7 +71,7 @@
                         <String fx:value="cursor-pointer"/>
                     </styleClass>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="35.0">
+                <Button mnemonicParsing="false" onAction="#onActionMin">
                     <graphic>
                         <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -89,10 +89,10 @@
         </HBox>
     </children>
     <padding>
-        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
     </padding>
     <styleClass>
-        <String fx:value="primary-color"/>
-        <String fx:value="border-rounded"/>
+        <String fx:value="primary-color" />
+        <String fx:value="border-rounded" />
     </styleClass>
 </HBox>

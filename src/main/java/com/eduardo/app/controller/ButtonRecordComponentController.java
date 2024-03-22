@@ -35,6 +35,8 @@ public class ButtonRecordComponentController implements Initializable, Closable 
         recorder = new RecorderCV();
         stageBarTime = AppProvider.providerStageBarTime();
         playTime = new PlayTime();
+        BarTimeSceneController barTimeSceneController = (BarTimeSceneController) stageBarTime.getScene().getRoot().getProperties().get("controller");
+        barTimeSceneController.setButtonRecordComponentController(this);
     }
 
     @Override
@@ -71,7 +73,7 @@ public class ButtonRecordComponentController implements Initializable, Closable 
         playTime.stop();
     }
 
-    private void stopRecording() {
+    public void stopRecording() {
         setBtnIconRec();
         closeStageSceneBarTime();
         stopTimer();
