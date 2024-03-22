@@ -6,15 +6,21 @@ import com.eduardo.app.recorder.Recorder;
 import com.eduardo.app.recorder.RecorderCV;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
 
-public class ButtonRecordController {
+public class ButtonRecordComponentController implements Initializable, Closable {
+    @FXML
+    public Pane rootButtonRecordComponent;
     @FXML
     public Button btnRecord;
     @FXML
@@ -25,10 +31,15 @@ public class ButtonRecordController {
     private Stage stageBarTime;
     private PlayTime playTime;
 
-    public ButtonRecordController() {
+    public ButtonRecordComponentController() {
         recorder = new RecorderCV();
         stageBarTime = AppProvider.providerStageBarTime();
         playTime = new PlayTime();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        rootButtonRecordComponent.getProperties().put("controller", this);
     }
 
     public void onActionBtnRecord(ActionEvent actionEvent) {
@@ -89,5 +100,10 @@ public class ButtonRecordController {
 
     private void closeStageSceneBarTime() {
         stageBarTime.close();
+    }
+
+    @Override
+    public void close() {
+        if (isRecording) stopRecording();
     }
 }

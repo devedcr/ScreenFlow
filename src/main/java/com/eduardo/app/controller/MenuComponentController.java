@@ -1,5 +1,6 @@
 package com.eduardo.app.controller;
 
+import com.eduardo.app.container.AppContainer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -33,7 +34,10 @@ public class MenuComponentController implements Initializable {
     }
 
     public void onBtnClose(ActionEvent actionEvent) {
-        ((Stage) btnMin.getScene().getWindow()).close();
+        Stage mainStage = AppContainer.get("mainStage", Stage.class);
+        Closable mainController = (Closable) mainStage.getScene().getRoot().getProperties().get("controller");
+        mainController.close();
+        mainStage.close();
     }
 
 }

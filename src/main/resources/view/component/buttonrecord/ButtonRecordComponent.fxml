@@ -7,8 +7,8 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<Pane prefHeight="327.0" prefWidth="137.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.eduardo.app.controller.ButtonRecordController">
+<Pane fx:id="rootButtonRecordComponent" prefHeight="327.0" prefWidth="137.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.eduardo.app.controller.ButtonRecordComponentController">
     <styleClass>
         <String fx:value="secondary-color"/>
         <String fx:value="border-rounded"/>

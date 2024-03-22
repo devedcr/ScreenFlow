@@ -1,5 +1,6 @@
 package com.eduardo.app;
 
+import com.eduardo.app.container.AppContainer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,6 +13,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        AppContainer.put("mainStage", stage);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/scene/main/MainScene.fxml"));
         Parent root = loader.load();
         root.getStylesheets().add("/css/style.css");

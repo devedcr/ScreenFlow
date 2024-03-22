@@ -43,7 +43,7 @@
                             <tabs>
                                 <Tab text="Screen">
                                     <content>
-                                        <fx:include source="../../component/tabscreen/TabScreenComponent.fxml"/>
+                                        <fx:include fx:id="rootTabScreenComponent" source="../../component/tabscreen/TabScreenComponent.fxml"/>
                                     </content>
                            <graphic>
                               <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
@@ -67,7 +67,7 @@
                                 </Tab>
                             </tabs>
                         </TabPane>
-                        <fx:include source="../../component/buttonrecord/ButtonRecordComponent.fxml"/>
+                        <fx:include fx:id="rootButtonRecordComponent" source="../../component/buttonrecord/ButtonRecordComponent.fxml"/>
                     </children>
                <VBox.margin>
                   <Insets />

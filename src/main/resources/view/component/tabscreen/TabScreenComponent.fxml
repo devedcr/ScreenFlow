@@ -7,9 +7,9 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.text.Font?>
-<AnchorPane xmlns="http://javafx.com/javafx"
+<AnchorPane fx:id="rootTabScreenComponent" xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.eduardo.app.controller.TabScreenController"
+            fx:controller="com.eduardo.app.controller.TabScreenComponentController"
             prefHeight="265.0" prefWidth="423.0">
     <children>
         <VBox prefHeight="295.0" prefWidth="423.0">
